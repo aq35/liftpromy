@@ -10,10 +10,13 @@
   },
   "dependencies": {
     "sass": "^1.77.6",
-    "vue": "^3.4.21"
+    "vue": "^3.4.21",
+    "vue-router": "^4.0.13"
   },
   "devDependencies": {
+    "@types/node": "^20.14.6",
     "@vitejs/plugin-vue": "^5.0.4",
+    "normalize.css": "^8.0.1",
     "typescript": "^5.2.2",
     "vite": "^5.2.0",
     "vue-tsc": "^2.0.6"
