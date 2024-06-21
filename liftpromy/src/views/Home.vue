@@ -1,8 +1,8 @@
 <template>
-    <div id="app">
-        <Profile />
-        <!-- <Skills />
-        <Projects /> -->
+    <div >
+    <Profile />
+    <!-- <Skills />
+    <Projects /> -->
     </div>
 </template>
 
