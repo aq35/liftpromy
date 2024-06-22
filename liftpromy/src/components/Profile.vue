@@ -27,7 +27,7 @@
                 <div class="resume-section-content">
                     <div class="relative max-w-screen-xl w-full mx-auto xl:px-5">
                         <div class="relative w-full grid gap-12 lg:grid-cols-2">
-                            <div class="w-full flex justify-center items-center px-5 xl:px-0">
+                            <div class="w-full flex justify-center items-center px-3 xl:px-0">
                                 <div class="sm:max-w-[480px]">
                                     <h2 class="text-4xl font-bold md:text-5xl">PRO<span class="text-primary">FILE</span>
                                     </h2>
@@ -71,7 +71,7 @@
                 <div class="resume-section-content">
                     <div class="relative max-w-screen-xl w-full mx-auto xl:px-5">
                         <div class="relative w-full grid gap-12 lg:grid-cols-2">
-                            <div class="w-full flex justify-center items-center px-5 xl:px-0">
+                            <div class="w-full flex justify-center items-center px-3 xl:px-0">
                                 <div class="sm:max-w-[480px]">
                                     <h2 class="text-4xl font-bold md:text-5xl">Hist<span class="text-primary">ory</span>
                                     </h2>
