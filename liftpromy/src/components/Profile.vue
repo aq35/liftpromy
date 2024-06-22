@@ -57,18 +57,6 @@
                                         <p class="mb-1 text-gray-700 leading-relaxed">
                                             「常に技術の最前線に立ち、フロントエンドからインフラ、機械学習まで幅広い分野での専門性を持ち、全ての開発工程で高品質な成果を生み出すエンジニアとして成長する」
                                         </p>
-                                        <p class="mb-1"><strong class="d-inline-block"
-                                                style="width: 150px;">History</strong></p>
-                                        <p class="mb-1 text-gray-700 leading-relaxed">
-                                            5年間の様々な業種でのアルバイト経験を経て、手に職をつけたいと思い、SES企業に入社しました。
-                                            しかし、成長を感じられず、一つのプロジェクトが終わったのを機に退職しました。
-                                        </p>
-                                        <p class="mb-1 text-gray-700 leading-relaxed">
-                                            その後、介護福祉の仕事に出会い、穏やかな時間を過ごす中で、自分の問題（目標の設定、学習方法、コミュニケーション）に気付きました。
-                                        </p>
-                                        <p class="mb-1 text-gray-700 leading-relaxed">
-                                            システム開発会社に入社し、現在はWEB系の受託開発に携わっております。
-                                        </p>
                                     </div>
                                 </div>
                             </div>
