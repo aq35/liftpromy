@@ -23,7 +23,6 @@
             </div>
         </nav>
         <div class="container-fluid p-0">
-            <!-- プロフィール -->
             <section class="resume-section" id="profile">
                 <div class="resume-section-content">
                     <div class="relative max-w-screen-xl w-full mx-auto xl:px-5">
@@ -32,28 +31,74 @@
                                 <div class="sm:max-w-[480px]">
                                     <h2 class="text-4xl font-bold md:text-5xl">PRO<span class="text-primary">FILE</span>
                                     </h2>
-                                    <p class="mb-0">
-                                        細部 寿麻
-                                    </p>
-                                    <p class="mb-0">
-                                        ほそべ かずま
-                                    </p>
-                                    <p class="mb-0">
-                                        生まれ 秋田
-                                    </p>
-                                    <p class="mb-0">
-                                        <a href="mailto:name@email.com">nagarestarzxc@gmail.com</a>
-                                    </p>
-
+                                    <p class="mb-1"><strong class="d-inline-block" style="width: 150px;">名　前</strong>細部
+                                        寿麻（ほそべ かずま）</p>
+                                    <p class="mb-1"><strong class="d-inline-block" style="width: 150px;">所在地</strong>東京都
+                                        日野市</p>
+                                    <p class="mb-1"><strong class="d-inline-block"
+                                            style="width: 150px;">メールアドレス</strong><a
+                                            href="mailto:nagarestarzxc@gmail.com">nagarestarzxc@gmail.com</a></p>
+                                    <p class="mb-1"><strong class="d-inline-block" style="width: 150px;">SNS</strong><a
+                                            href="mailto:nagarestarzxc@gmail.com">
+                                            <a class="btn btn-sm btn-outline-dark" href="https://github.com/aq35"
+                                                target="_blank">
+                                                <i class="fab fa-github"></i> aq35
+                                            </a>
+                                        </a></p>
+                                    <p class="mb-2"></p>
                                     <div class="sm:max-w-[480px]">
-                                        <p class="mt-6 text-gray-700 leading-relaxed">
-                                            私は、5年間のアルバイト経験を経て、1年間エンジニアとして勤務しました。アルバイト時代は虚しさを感じることもありましたが、エンジニアとしてのはじまりは希望に満ち溢れていたような気がします。しかし、自分の無力さを痛感し、プロジェクトを続けることが難しいと判断しました。その後、1年間の介護経験を通じて穏やかな時間を過ごす中で、もう一度自分がやりたいことに挑戦したいと思い、エンジニアの門を再びくぐりました。現在、エンジニアとして5年目を迎えています。
+                                        <p class="mb-1"><strong class="d-inline-block"
+                                                style="width: 150px;">Mission</strong></p>
+                                        <p class="mb-1 text-gray-700 leading-relaxed">
+                                            「多様な技術分野での知識とスキルを活かし、ユーザーに価値あるソリューションを提供すること。」
+                                        </p>
+                                        <p class="mb-1"><strong class="d-inline-block"
+                                                style="width: 150px;">Vision</strong></p>
+                                        <p class="mb-1 text-gray-700 leading-relaxed">
+                                            「常に技術の最前線に立ち、フロントエンドからインフラ、機械学習まで幅広い分野での専門性を持ち、全ての開発工程で高品質な成果を生み出すエンジニアとして成長する」
+                                        </p>
+                                        <p class="mb-1"><strong class="d-inline-block"
+                                                style="width: 150px;">History</strong></p>
+                                        <p class="mb-1 text-gray-700 leading-relaxed">
+                                            5年間の様々な業種でのアルバイト経験を経て、手に職をつけたいと思い、SES企業に入社しました。
+                                            しかし、成長を感じられず、一つのプロジェクトが終わったのを機に退職しました。
+                                        </p>
+                                        <p class="mb-1 text-gray-700 leading-relaxed">
+                                            その後、介護福祉の仕事に出会い、穏やかな時間を過ごす中で、自分の問題（目標の設定、学習方法、コミュニケーション）に気付きました。
+                                        </p>
+                                        <p class="mb-1 text-gray-700 leading-relaxed">
+                                            システム開発会社に入社し、現在はWEB系の受託開発に携わっております。
                                         </p>
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
 
-                                    <a class="btn btn-outline-dark" href="https://github.com/aq35" target="_blank">
-                                        <i class="fab fa-github"></i> GitHub
-                                    </a>
+            <!-- プロフィール -->
+            <section class="resume-section" id="history">
+                <div class="resume-section-content">
+                    <div class="relative max-w-screen-xl w-full mx-auto xl:px-5">
+                        <div class="relative w-full grid gap-12 lg:grid-cols-2">
+                            <div class="w-full flex justify-center items-center px-5 xl:px-0">
+                                <div class="sm:max-w-[480px]">
+                                    <h2 class="text-4xl font-bold md:text-5xl">Hist<span class="text-primary">ory</span>
+                                    </h2>
+                                    <div class="sm:max-w-[480px]">
+                                        <p class="mb-1 text-gray-700 leading-relaxed">
+                                            5年間の様々な業種でのアルバイト経験を経て、手に職をつけたいと思い、SES企業に入社しました。
+                                            しかし、成長を感じられず、一つのプロジェクトが終わったのを機に退職しました。
+                                        </p>
+                                        <p class="mb-1 text-gray-700 leading-relaxed">
+                                            その後、介護福祉の仕事に出会い、穏やかな時間を過ごす中で、自分の問題（目標の設定、学習方法、コミュニケーション）に気付きました。
+                                        </p>
+                                        <p class="mb-1 text-gray-700 leading-relaxed">
+                                            システム開発会社に入社し、現在はWEB系の受託開発に携わっております。
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -240,12 +285,12 @@
 import { ref, onMounted, onUnmounted } from 'vue';
 
 const sections = [
-    { id: 'profile', name: 'PROFILE' },
-    { id: 'experience', name: 'Experience' },
-    { id: 'education', name: 'Education' },
-    { id: 'skills', name: 'Skills' },
-    { id: 'interests', name: 'Interests' },
-    { id: 'awards', name: 'Awards' },
+    { id: 'profile', name: 'Profile' },
+    { id: 'history', name: 'History' },
+    // { id: 'education', name: 'Education' },
+    // { id: 'skills', name: 'Skills' },
+    // { id: 'interests', name: 'Interests' },
+    // { id: 'awards', name: 'Awards' },
 ];
 
 const activeSection = ref('');
@@ -280,7 +325,7 @@ onUnmounted(() => {
 <style scoped>
 .nav-link.active {
     font-weight: bold;
-    color: #ff5733 !important;
+    color: #ffffff !important;
     /* 強調表示の色を指定 */
 }
 </style>
