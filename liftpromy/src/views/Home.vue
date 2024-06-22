@@ -1,28 +1,20 @@
 <template>
-    <div >
-    <Profile />
-    <!-- <Skills />
-    <Projects /> -->
+    <div>
+        <Resume />
     </div>
 </template>
 
 <script>
-import Profile from '@/components/Profile.vue';
-// import Skills from './components/Skills.vue';
-// import Projects from './components/Projects.vue';
+import Resume from '@/components/Resume.vue';
 
 export default {
     name: 'App',
     components: {
-        Profile,
-        // Skills,
-        // Projects,
+        Resume,
     },
 };
 </script>
 
 <style>
-@import 'bootstrap/dist/css/bootstrap.min.css';
-@import '@/assets/resume/css/resume.css';
 /* テンプレートのCSSをインポート */
 </style>
