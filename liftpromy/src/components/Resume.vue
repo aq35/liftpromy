@@ -46,13 +46,15 @@
                     </a></p>
                 <p class="mb-2"></p>
                 <div class="sm:max-w-[480px]">
-                    <p class="mb-1"><strong class="d-inline-block" style="width: 150px;">Mission</strong></p>
+                    <p class="mb-1"><strong class="d-inline-block" style="width: 150px;">最終目標</strong></p>
                     <p class="mb-1 text-gray-700 leading-relaxed">
-                        「多様な技術分野での知識とスキルを活かし、ユーザーに価値あるソリューションを提供する」
+                        CTO/CIOとして、企業全体の技術ビジョンを策定・実行し、技術投資とイノベーションを推進する人材になりたい。
                     </p>
-                    <p class="mb-1"><strong class="d-inline-block" style="width: 150px;">Vision</strong></p>
+                    <p class="mb-1"><strong class="d-inline-block" style="width: 150px;">現在の目標</strong></p>
                     <p class="mb-1 text-gray-700 leading-relaxed">
-                        「常に技術の最前線に立ち、フロントエンドからインフラ、機械学習まで幅広い分野での専門性を持ち、全ての開発工程で高品質な成果を生み出すエンジニアとして成長する」
+                        プロジェクト管理スキルとリーダーシップスキルを向上させる。
+                        具体的には、効果的なプロジェクト計画、リソース管理、リスク管理を実践し、小規模チームをリードし、メンバーの成長を支援する。
+                        また、フロントエンドおよびバックエンド技術、クラウドプラットフォームのスキルを強化する。
                     </p>
                 </div>
             </ResumeSection>
@@ -75,27 +77,70 @@
             <hr class="m-0" />
 
             <ResumeSection id="projects">
-                <h2 class="text-4xl font-bold md:text-5xl">Pr<span class="text-primary">o</span>ject<span
+                <h2 class="text-4xl font-bold md:text-5xl"><span class="text-primary">Pro</span>ject<span
                         class="text-primary">s</span></h2>
                 <div class="project" v-for="project in projects" :key="project.id">
                     <h3 class="text-3xl font-semibold">{{ project.title }}</h3>
                     <p class="text-gray-700 leading-relaxed">{{ project.description }}</p>
-                    <p><strong>Technologies:</strong> {{ project.technologies.join(', ') }}</p>
-                    <a :href="project.link" target="_blank" class="text-primary">View Project</a>
+                    <p><strong>期間:</strong> {{ project.duration }}</p>
+                    <p><strong>種別:</strong> <span class="badge bg-primary">{{ project.type }}</span></p>
+                    <p><strong>役割:</strong>
+                        <span v-for="role in project.roles" :key="role" class="badge bg-secondary me-1">{{ role
+                            }}</span>
+                    </p>
+                    <p><strong>PC:</strong> {{ project.pc.join(', ') }}</p>
+                    <p><strong>言語:</strong> {{ project.languages.join(', ') }}</p>
+                    <p><strong>開発環境:</strong> {{ project.environment.join(', ') }}</p>
+                    <p><strong>成長:</strong>
+                    <div v-for="item in project.growth" :key="item">{{ item }}</div>
+                    </p>
+
                 </div>
             </ResumeSection>
 
             <hr class="m-0" />
 
             <ResumeSection id="skills">
-                <h2 class="text-4xl font-bold md:text-5xl">Skills</h2>
-                <div class="card" style="width: min-content;">
-                    <SkillsRadarChart :skillArea="laravelSkills" />
+                <h2 class="text-4xl font-bold md:text-5xl">Ski<span class="text-primary">ll</span>s<span
+                        class="text-primary"></span></h2>
+                <div class="row">
+                    <SkillCategory title="フロントエンド" message="直近ではVue3で開発してました。" :skills="[
+                    { name: 'Vue3', level: 75, comment: 'TypeScriptとセットで使います。' },
+                    { name: 'Bootstrap5', level: 65, comment: '' },
+                ]" />
+                    <SkillCategory title="サーバーサイド" message="職場では、Laravel先生と呼ばれます。" :skills="[
+                    { name: 'Laravel', level: 75, comment: '' },
+                    { name: 'PHP', level: 70, comment: '' },
+                    { name: 'Python', level: 20, comment: '' },
+                ]" />
+                    <SkillCategory title="DB" message="" :skills="[
+                    { name: 'MySQL', level: 55, comment: '' },
+                    { name: 'MongoDB', level: 15, comment: '' },
+                ]" />
+                    <SkillCategory title="インフラ・サーバー" message="これから伸ばしていきたい分野です。" :skills="[
+                    { name: 'Docker', level: 60, comment: '' },
+                    { name: 'Nginx', level: 35, comment: '' },
+                    { name: 'Conoha', level: 35, comment: '(実務経験なし)' },
+                    { name: 'Kubernetes', level: 30, comment: '(実務経験なし)' },
+                    { name: 'AWS', level: 10, comment: '(実務経験なし)' },
+                ]" />
+                    <SkillCategory title="その他" message="" :skills="[
+                    { name: 'Github', level: 60, comment: '' },
+                    { name: 'VSCode', level: 60, comment: '' },
+                    { name: 'Figma', level: 20, comment: '要件定義で使う' },
+                    { name: 'Google Spreadsheet', level: 20, comment: '要件定義で使う' },
+                ]" />
                 </div>
+            </ResumeSection>
+            <hr class="m-0" />
 
+            <ResumeSection id="thankyou">
+                <h2 class="text-4xl font-bold md:text-5xl"><span class="text-primary">Thank</span> You!</h2>
+                <p class="text-gray-700 leading-relaxed">
+                    ポートフォリオをご覧いただきありがとうございます。
+                </p>
             </ResumeSection>
 
-            <hr class="m-0" />
         </div>
     </section>
 </template>
@@ -104,12 +149,14 @@
 import { ref, onMounted, onUnmounted } from 'vue';
 import ResumeSection from './ResumeSection.vue';
 import SkillsRadarChart from './SkillsRadarChart.vue';
+import SkillCategory from './SkillCategory.vue';
 
 const sections = [
     { id: 'profile', name: 'Profile' },
     { id: 'history', name: 'History' },
     { id: 'projects', name: 'Projects' },
-
+    { id: 'skills', name: 'Skills' },
+    { id: 'thankyou', name: 'Thank you!' },
 ];
 
 const activeSection = ref('');
@@ -147,45 +194,49 @@ const historyItems = ref([
     }
 ]);
 
-
 const projects = ref([
     {
         id: 1,
-        title: 'E-commerce Website',
-        description: 'Developed a full-fledged e-commerce website with user authentication, product listings, and a shopping cart system. Integrated payment gateways and implemented responsive design.',
-        technologies: ['Vue.js', 'Vuex', 'Node.js', 'Express', 'MongoDB'],
-        link: 'https://example.com/ecommerce'
+        title: 'ECプラットフォーム開発',
+        description: '企業間でのギフト送付を目的としたオンラインショッピングモールです。企業が他の企業にプレゼントを送る際に、最適なギフトを推薦する機能を持っています。',
+        duration: '2021/6〜2022/7 (14ヶ月)',
+        type: '受託開発',
+        roles: [
+            '要件定義(お手伝い)',
+            '設計（基本設計、画面設計、詳細設計）',
+            'Webアプリの開発（運営向け、加盟店向け、利用者向け(外注)）',
+            'Web APIの開発（利用者スマホアプリ向け）',
+            'PAY.JP Platform型 API'
+        ],
+        pc: ['Windows 10', 'Mac mini'],
+        languages: ['Laravel(PHP8)', 'Vue3', 'TypeScript', 'JavaScript', 'SCSS', 'Bootstrap5', 'Flutter(Dart)'],
+        environment: ['phpMyAdmin', 'MariaDB', 'MinIO', 'Docker', 'AWS', 'Visual Studio Code', 'GitHub', 'SCSS', 'Bootstrap 5', 'Redmine', 'LINE WORKS'],
+        growth: [
+            '・新技術の調査、導入(Docker・Vue3)',
+            '・お客様とのMTGで基本設計フェーズ以降の質疑応答を担当',
+            '・外注先エンジニアに、技術コーチング(Laravel、Vue3)',
+        ]
     },
     {
         id: 2,
-        title: 'Portfolio Website',
-        description: 'Created a personal portfolio website to showcase my projects and skills. Implemented dynamic content loading and SEO best practices.',
-        technologies: ['HTML', 'CSS', 'JavaScript', 'Bootstrap'],
-        link: 'https://example.com/portfolio'
+        title: '通信講座システム機能追加',
+        description: '受講生が購入した通信講座のスケジュール管理機能を追加',
+        duration: '2023/06〜2023/12(6ヶ月)',
+        type: '受託開発',
+        roles: [
+            '要件定義',
+            '設計（基本設計、画面設計、詳細設計）',
+            'Webアプリの開発（運営向け、利用者向け(外注)）',
+        ],
+        pc: ['Mac mini'],
+        languages: ['Laravel8(PHP8)', 'JQuery'],
+        environment: ['MySQL', 'Docker', 'Visual Studio Code', 'GitHub', 'Office', 'Backlog', 'LINE WORKS'],
+        growth: [
+            '・要件定義から納品までやりきった。',
+            '・スケジュール管理や、お客様とのコミュニケーションの大事さを身をもって知る。',
+        ]
     },
-    {
-        id: 3,
-        title: 'Task Management App',
-        description: 'Developed a task management application that allows users to create, edit, and delete tasks. Implemented user authentication and real-time updates using WebSocket.',
-        technologies: ['React', 'Redux', 'Node.js', 'Express', 'Socket.io'],
-        link: 'https://example.com/taskmanager'
-    },
-    {
-        id: 4,
-        title: 'Weather Dashboard',
-        description: 'Built a weather dashboard that displays current weather conditions and forecasts for multiple cities. Utilized third-party APIs to fetch weather data and implemented dynamic updates.',
-        technologies: ['Angular', 'TypeScript', 'RxJS', 'API'],
-        link: 'https://example.com/weatherdashboard'
-    },
-    {
-        id: 5,
-        title: 'Blog Platform',
-        description: 'Developed a multi-user blog platform with features such as user registration, post creation, commenting, and social media sharing.',
-        technologies: ['Ruby on Rails', 'PostgreSQL', 'Heroku'],
-        link: 'https://example.com/blogplatform'
-    }
 ]);
-
 
 const handleScroll = () => {
     console.log(sections);
