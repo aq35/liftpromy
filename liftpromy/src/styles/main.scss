@@ -6,10 +6,18 @@ body {
     color: rgba(255, 255, 255, 0.55);
 }
 
-.nav-link.active {
-    font-weight: bold;
-    color: #ffffff !important;
+.nav-link:hover,
+.nav-link:focus {
+    color: rgba(255, 255, 255, 0.75);
 }
+
+.nav-link {
+    &.active {
+        font-weight: bold;
+        color: #ffffff !important;
+    }
+}
+
 
 .timeline {
     padding-left: 20px;

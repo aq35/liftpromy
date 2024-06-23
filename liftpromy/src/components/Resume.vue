@@ -30,7 +30,7 @@
         <!-- コンテンツ -->
         <div class="container-fluid p-0">
             <ResumeSection id="profile">
-                <h2 class="text-4xl font-bold md:text-5xl">PRO<span class="text-primary">FILE</span>
+                <h2 class="text-4xl font-bold md:text-5xl">Pro<span class="text-primary">file</span>
                 </h2>
                 <p class="mb-1"><strong class="d-inline-block" style="width: 150px;">名　前</strong>細部
                     寿麻（ほそべ かずま）</p>
@@ -58,6 +58,7 @@
             </ResumeSection>
 
             <hr class="m-0" />
+
             <ResumeSection id="history">
                 <h2 class="text-4xl font-bold md:text-5xl">Hist<span class="text-primary">ory</span>
                 </h2>
@@ -70,6 +71,30 @@
                     </div>
                 </div>
             </ResumeSection>
+
+            <hr class="m-0" />
+
+            <ResumeSection id="projects">
+                <h2 class="text-4xl font-bold md:text-5xl">Pr<span class="text-primary">o</span>ject<span
+                        class="text-primary">s</span></h2>
+                <div class="project" v-for="project in projects" :key="project.id">
+                    <h3 class="text-3xl font-semibold">{{ project.title }}</h3>
+                    <p class="text-gray-700 leading-relaxed">{{ project.description }}</p>
+                    <p><strong>Technologies:</strong> {{ project.technologies.join(', ') }}</p>
+                    <a :href="project.link" target="_blank" class="text-primary">View Project</a>
+                </div>
+            </ResumeSection>
+
+            <hr class="m-0" />
+
+            <ResumeSection id="skills">
+                <h2 class="text-4xl font-bold md:text-5xl">Skills</h2>
+                <div class="card" style="width: min-content;">
+                    <SkillsRadarChart :skillArea="laravelSkills" />
+                </div>
+
+            </ResumeSection>
+
             <hr class="m-0" />
         </div>
     </section>
@@ -78,10 +103,12 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
 import ResumeSection from './ResumeSection.vue';
+import SkillsRadarChart from './SkillsRadarChart.vue';
 
 const sections = [
     { id: 'profile', name: 'Profile' },
     { id: 'history', name: 'History' },
+    { id: 'projects', name: 'Projects' },
 
 ];
 
@@ -121,6 +148,44 @@ const historyItems = ref([
 ]);
 
 
+const projects = ref([
+    {
+        id: 1,
+        title: 'E-commerce Website',
+        description: 'Developed a full-fledged e-commerce website with user authentication, product listings, and a shopping cart system. Integrated payment gateways and implemented responsive design.',
+        technologies: ['Vue.js', 'Vuex', 'Node.js', 'Express', 'MongoDB'],
+        link: 'https://example.com/ecommerce'
+    },
+    {
+        id: 2,
+        title: 'Portfolio Website',
+        description: 'Created a personal portfolio website to showcase my projects and skills. Implemented dynamic content loading and SEO best practices.',
+        technologies: ['HTML', 'CSS', 'JavaScript', 'Bootstrap'],
+        link: 'https://example.com/portfolio'
+    },
+    {
+        id: 3,
+        title: 'Task Management App',
+        description: 'Developed a task management application that allows users to create, edit, and delete tasks. Implemented user authentication and real-time updates using WebSocket.',
+        technologies: ['React', 'Redux', 'Node.js', 'Express', 'Socket.io'],
+        link: 'https://example.com/taskmanager'
+    },
+    {
+        id: 4,
+        title: 'Weather Dashboard',
+        description: 'Built a weather dashboard that displays current weather conditions and forecasts for multiple cities. Utilized third-party APIs to fetch weather data and implemented dynamic updates.',
+        technologies: ['Angular', 'TypeScript', 'RxJS', 'API'],
+        link: 'https://example.com/weatherdashboard'
+    },
+    {
+        id: 5,
+        title: 'Blog Platform',
+        description: 'Developed a multi-user blog platform with features such as user registration, post creation, commenting, and social media sharing.',
+        technologies: ['Ruby on Rails', 'PostgreSQL', 'Heroku'],
+        link: 'https://example.com/blogplatform'
+    }
+]);
+
 
 const handleScroll = () => {
     console.log(sections);
@@ -138,6 +203,17 @@ const handleScroll = () => {
         }
     }
 };
+
+const laravelSkills = ref({
+    labels: ['チームワーク', '設計', '開発', '統率', '成長性'],
+    name: 'Laravel',
+    param1: 75,
+    param2: 50,
+    param3: 70,
+    param4: 25,
+    param5: 85,
+    icon: 'https://upload.wikimedia.org/wikipedia/commons/9/9a/Laravel.svg' // LaravelのアイコンURL
+});
 
 onMounted(() => {
     window.addEventListener('scroll', handleScroll);

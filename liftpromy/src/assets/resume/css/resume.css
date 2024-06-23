@@ -12623,21 +12623,6 @@ body {
 }
 
 h1,
-.h1,
-h2,
-.h2,
-h3,
-.h3,
-h4,
-.h4,
-h5,
-.h5,
-h6,
-.h6 {
-  text-transform: uppercase;
-}
-
-h1,
 .h1 {
   line-height: 1;
 }
@@ -12662,7 +12647,6 @@ p.lead {
 #sideNav .navbar-nav .nav-item .nav-link {
   font-weight: 800;
   letter-spacing: 0.05rem;
-  text-transform: uppercase;
 }
 
 #sideNav .navbar-toggler:focus {
@@ -12756,10 +12740,8 @@ section.resume-section .resume-section-content {
   width: 100%;
 }
 
-@media (min-width: 768px) {
-  section.resume-section {
-    min-height: 100vh;
-  }
+section.resume-section {
+  min-height: 100vh;
 }
 
 @media (min-width: 992px) {

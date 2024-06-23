@@ -6,7 +6,6 @@
 
 <script>
 import Resume from '@/components/Resume.vue';
-
 export default {
     name: 'App',
     components: {
@@ -14,7 +13,3 @@ export default {
     },
 };
 </script>
-
-<style>
-/* テンプレートのCSSをインポート */
-</style>
